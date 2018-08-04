@@ -1,0 +1,64 @@
+{
+  "name": "electron-with-angular",
+  "version": "0.0.1",
+  "description": "A small application using electron and angular. It is a scaffolding example.",
+  "author": {
+    "name": "BlueSkyFish",
+    "email": "blueskyfish@blueskyfish.de",
+    "url": "https://blueskyfish.de"
+  },
+  "private": true,
+  "keywords": [
+    "electron",
+    "angular",
+    "angular 6",
+    "example",
+    "scaffolding"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blueskyfish/electron-with-angular.git"
+  },
+  "main": "lib/main.js",
+  "scripts": {
+    "clean:electron": "./node_modules/.bin/del -f lib",
+    "clean:dist": "./node_modules/.bin/del -f dist",
+    "start": "npm-run-all -p start:frontend start:backend",
+    "start:backend": "wait-on http-get://localhost:5200/ && npm run clean:electron && npm-run-all -s build:dev start:electron",
+    "start:frontend": "cd frontend && npm start",
+    "start:electron": "./node_modules/.bin/electron . --serve",
+    "build:mac": "npm-run-all -s build:frontend build:backend clean:dist build:electron",
+    "build:electron": "./node_modules/.bin/build -m",
+    "build:dev": "tsc --sourceMap true",
+    "build:prod": "tsc --sourceMap false",
+    "build:backend": "npm-run-all -s clean:electron build:prod",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "build": {
+    "appId": "de.blueskyfish.example",
+    "productName": "electron-with-angular",
+    "asar": true,
+    "files": [
+      "lib/main.js",
+      {
+        "from": "frontend/dist/webapp/",
+        "to": "webapp"
+      }
+    ],
+    "mac": {
+      "icon": "build/mac/logo.icns",
+      "target": "zip"
+    }
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.116",
+    "@types/minimist": "^1.2.0",
+    "del-cli": "^1.1.0",
+    "electron": "^2.0.6"
+  }
+}
