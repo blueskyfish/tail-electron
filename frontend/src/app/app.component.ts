@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'elan-root',
+  selector: 'elan-container',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
