@@ -114,3 +114,6 @@ app.on('activate', () => {
 	}
 });
 
+ipcMain.on('elan.frontend.ready', (ev: any, ...args: any[]) => {
+	console.log('Frontend: ', args);
+});
