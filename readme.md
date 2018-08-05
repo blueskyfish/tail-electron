@@ -25,6 +25,38 @@ This nodejs modules must be installed globally
 * wait-on
 * npm-run-all
 
+## Develop
+
+There are two possiblies to start the application. Both methods have the live reload of the frontend.
+
+### Separately
+
+Open two terminal windows in the project root directory
+
+**Terminal 1** (Frontend)
+
+```bash
+$ npm run start:frontend
+```
+
+**Terminal 2** (Backend)
+
+```bash
+$ npm run start:backend
+```
+
+> Wait to start the backend until the frontend is finish to start.
+
+### All Together
+
+Starting the both parts together
+
+```bash
+$ npm start
+```
+
+
+
 ## Application Layout
 
 The application has two parts. The backend is execute with the electron and the frontend is the ui of the application.
