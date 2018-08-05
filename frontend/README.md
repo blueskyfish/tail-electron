@@ -1,6 +1,6 @@
 
-![Elextron With Angular Frontend](../logo.png)
+![Tail Electron Frontend](../logo.png)
 
-# Electron with Angular Frontend
+# Tail Electron Frontend
 
 > The frontend of the Electron application

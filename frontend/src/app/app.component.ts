@@ -7,7 +7,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  title = 'Electron With Angular';
+  title = 'Tail Electron';
 
   constructor() {}
 

@@ -1,7 +1,7 @@
 {
-  "name": "electron-with-angular",
-  "version": "0.0.1",
-  "description": "A small application using electron and angular. It is a scaffolding example.",
+  "name": "tail-electron",
+  "version": "0.1.0",
+  "description": "A small electron application for show log files.",
   "author": {
     "name": "BlueSkyFish",
     "email": "blueskyfish@blueskyfish.de",
@@ -18,14 +18,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/blueskyfish/electron-with-angular.git"
+    "url": "https://github.com/blueskyfish/tail-electron.git"
   },
   "main": "lib/main.js",
   "scripts": {
     "clean:electron": "./node_modules/.bin/del -f lib",
     "clean:dist": "./node_modules/.bin/del -f dist",
     "start": "npm-run-all -p start:frontend start:backend",
-    "start:backend": "wait-on http-get://localhost:5200/ && npm run clean:electron && npm-run-all -s build:dev start:electron",
+    "start:backend": "wait-on http-get://localhost:5218/ && npm run clean:electron && npm-run-all -s build:dev start:electron",
     "start:frontend": "cd frontend && npm start",
     "start:electron": "./node_modules/.bin/electron . --serve",
     "build:mac": "npm-run-all -s build:frontend build:backend clean:dist build:electron",

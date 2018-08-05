@@ -22,7 +22,7 @@ let appSettings: ISettings = null;
  */
 const settingOptions: ISettingOptions = {
 	path: app.getPath('userData'),
-	file: 'elan-settings.json'
+	file: 'tail-settings.json'
 }
 
 /**
@@ -121,7 +121,7 @@ const createWindow = () => {
 		process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 
 		// get the frontend via http
-		mainWindow.loadURL('http://localhost:5200/');
+		mainWindow.loadURL('http://localhost:5218/');
 		mainWindow.webContents.openDevTools({
 			mode: 'detach'
 		});
@@ -215,7 +215,8 @@ app.on('ready', () => {
 			// application settings
 			appSettings = { ...result };
 
-			app.setName('Electron with Angular');
+			app.setName('Tail');
+
 			buildApplicationMenu();
 			createWindow();
 		});

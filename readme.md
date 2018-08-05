@@ -1,9 +1,9 @@
 
 ![Electron With Angular](logo.png)
 
-# Electron With Angular
+# Tail Electron
 
-> A small application using electron and angular. It is a scaffolding example.
+> A small electron application for show log files.
 >
 > ![Work in Progress](work-in-progress.png)<br>
 > Build and packing a native electron is only on Max OSX possible at the moment.

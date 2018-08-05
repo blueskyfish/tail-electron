@@ -1,11 +1,11 @@
 {
-  "name": "electron-with-angular-frontend",
+  "name": "tail-electron-frontend",
   "version": "0.0.1",
   "description": "The frontend of the Electron application",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 5200 --progress=false",
+    "start": "ng serve --port 5218 --progress=false",
     "build": "ng build --prod --base-href=./ --progress=false",
     "test": "ng test",
     "lint": "ng lint",
