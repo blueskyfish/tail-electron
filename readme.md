@@ -4,6 +4,9 @@
 # Electron With Angular
 
 > A small application using electron and angular. It is a scaffolding example.
+>
+> ![Work in Progress](work-in-progress.png)<br>
+> Build and packing a native electron is only on Max OSX possible at the moment.
 
 
 ## Requirement
@@ -54,7 +57,6 @@ Starting the both parts together
 ```bash
 $ npm start
 ```
-
 
 
 ## Application Layout
