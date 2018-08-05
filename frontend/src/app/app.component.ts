@@ -1,17 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'elan-container',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
 
   title = 'Electron With Angular';
 
   constructor() {}
 
   ngOnInit() {
+    console.log('>> Initialize');
+  }
 
+  ngOnDestroy() {
+    console.log('>> Destroy');
   }
 }
